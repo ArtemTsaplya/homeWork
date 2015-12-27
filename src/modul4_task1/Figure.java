@@ -1,18 +1,20 @@
 package modul4_task1;
 
 public class Figure {
-    double area;
+    private double area;
 
-    public void circle(int radius){
+
+    public double circle(int radius){
         area = Math.PI * Math.pow(radius, 2);
-        System.out.println("Площадь круга : " + area);
+        return area;
     }
-    public void rectangle(int weight, int height){
+    public double rectangle(int weight, int height){
         area = weight * height;
-        System.out.println("Площадь прямоугольника : " + area);
+        return area;
     }
-    public void triangle(int weight, int height, int angle){
+    public double triangle(int weight, int height, int angle){
         area = weight * height * Math.sin(Math.toRadians(angle)/2);
-        System.out.println("Площадь треугольника : " + area);
+        return area;
+
     }
 }

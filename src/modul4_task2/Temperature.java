@@ -1,9 +1,15 @@
 package modul4_task2;
 
 public class Temperature {
-    public double temperatureFahrenheit, temperatureCelsius;
+    private double temperatureFahrenheit, temperatureCelsius;
 
+    public double getTemperatureFahrenheit() {
+        return temperatureFahrenheit;
+    }
 
+    public double getTemperatureCelsius() {
+        return temperatureCelsius;
+    }
 
     public void temperatureConvert(double temperature){
 
