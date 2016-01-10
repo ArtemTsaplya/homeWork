@@ -1,23 +1,17 @@
 package modul6_task1;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class File {
     public static void main(String[] args) {
-        System.out.println("Input name: ");
-        final  Scanner scanner = new Scanner(System.in);
+
+        String fileName = "textfile.txt";
         try {
-            final int number = scanner.nextInt();
-            if (number <0){
-                throw new NegativeNumberException(number);
-            }
+            BufferedReader input = new BufferedReader(new FileReader(fileName));
 
-        }catch (IllegalStateException ex){   //Сигналы, что метод был вызван в недопустимое или несоответствующее время. Другими словами среда Java или приложение Java не находятся в соответствующем состоянии для требуемой работы.
-            System.out.println("[Error] : Метод был вызван в недопустимое или несоответствующее время");
-        } catch (NegativeNumberException e) {
-            System.out.println("[Error] : Input whole number!");
+        } catch (java.io.FileNotFoundException e) {
+            System.out.println("File not found");
         }
-
     }
-
 }
