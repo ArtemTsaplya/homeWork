@@ -9,6 +9,7 @@ public class Main {
         System.out.println("Min " + massive[0]);
         System.out.println("Max " + massive[4]);
 
+
         }
 
     }
