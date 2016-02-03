@@ -4,6 +4,5 @@ public class Main {
     public static void main(String[] args) {
         Temperature temp = new Temperature();
         temp.temperatureConvert(72.3);
-
     }
 }

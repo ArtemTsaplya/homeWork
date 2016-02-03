@@ -7,5 +7,4 @@ public class Distance {
         double distance =  Math.sqrt (Math.pow(a, 2) + Math.pow(b, 2));
         System.out.println(distance);
     }
-
 }
