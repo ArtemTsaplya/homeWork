@@ -25,7 +25,7 @@ public class CaesarCode {
             stringArray[y] = r;
         }
         System.out.println();
-        System.out.print("Original text :");
+        System.out.print("Decoding text :");
         for (char v: stringArray){
             System.out.print(v);
         }

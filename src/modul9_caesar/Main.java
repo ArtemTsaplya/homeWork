@@ -6,11 +6,18 @@ public class Main {
     public static void main(String[] args) {
         System.out.print("Please enter text for Encryption: ");
         Scanner scanner = new Scanner(System.in);
-        String string1 = scanner.nextLine();
+        String encodeText = scanner.nextLine();
+        System.out.print("Enter mode: ");
+        int encodeMode = scanner.nextInt();
+
         System.out.print("Please enter text for Decoding: ");
-        String string2 = scanner.nextLine();
+        Scanner scanner2 = new Scanner(System.in);
+        String decodeText = scanner2.nextLine();
+        System.out.print("Enter mode: ");
+        int decodeMod = scanner2.nextInt();
+
         CaesarCode caesarCode = new CaesarCode();
-        caesarCode.caesarEncode(string1,3);
-        caesarCode.caesarDecode(string2,3);
+        caesarCode.caesarEncode(encodeText,encodeMode);
+        caesarCode.caesarDecode(decodeText,decodeMod);
     }
 }
