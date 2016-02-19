@@ -1,7 +1,5 @@
 package modul9_caesar;
 
-import java.util.Arrays;
-
 public class CaesarCode {
 
     public String caesarEncode(String stringEncode, int mod) {
@@ -15,26 +13,26 @@ public class CaesarCode {
             i++;
         }
         StringBuilder builder = new StringBuilder();
-        for (char c : charArray){
+        for (char c : charArray) {
             builder.append(c);
         }
         return builder.toString();
     }
 
-    public void caesarDecode(String stringDecode, int mod) {
-        char[] stringArray = stringDecode.toCharArray();
-        for (int y = 0; y < stringArray.length; y++) {
-            char a = stringArray[y];
-            int b = (int) a;                              // переводим текст в символы по ASCII
-            b = b - mod;                                 // измененяем значение по методу шифрования Цезаря
-            char r = (char) b;                   // и сохраняем в массив
-            stringArray[y] = r;
+    public String caesarDecode(String text, int mod) {
+        char[] stringArray = text.toCharArray();
+        int i = 0;
+        for (char c : stringArray) {
+            int CharTOASCII = (int) c;
+            CharTOASCII = CharTOASCII - mod;
+            char ASCIItoChar = (char) CharTOASCII;
+            stringArray[i] = ASCIItoChar;
+            i++;
         }
-        System.out.println();
-        System.out.print("Decoding text :");
-        for (char v : stringArray) {
-            System.out.print(v);
+        StringBuilder builder = new StringBuilder();
+        for (char c : stringArray) {
+            builder.append(c);
         }
+        return builder.toString();
     }
-
 }

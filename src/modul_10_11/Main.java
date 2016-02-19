@@ -1,9 +1,10 @@
-package modul_10;
+package modul_10_11;
 
 import java.util.Scanner;
 
 public class Main {
     private static int encodeMode;
+
     public static void main(String[] args) {
         System.out.print("Please enter text for Encryption: ");
         Scanner scanner = new Scanner(System.in);
@@ -14,19 +15,20 @@ public class Main {
             if (encodeMode < 0) {
                 throw new NegativeNumberException();
             }
-        }catch (NegativeNumberException ex){
+        } catch (NegativeNumberException ex) {
             System.out.println("[Error]: Please enter positive number!");
             return;
-        }catch (IllegalStateException e){
+        } catch (IllegalStateException e) {
             e.getStackTrace();
         }
-        EncodeForText forText = new EncodeForText();
-        forText.encodeForText(encodeText, encodeMode);
+        EncodeDecodeForText forText = new EncodeDecodeForText();
+        String encodeToText = forText.encodeForText(encodeText, encodeMode);
+        System.out.println(encodeToText);
 
-        DecodeForText decodeFText = new DecodeForText();
-        decodeFText.decodeForText(encodeMode);
+        String decodeToText = forText.decodeForText(encodeToText, encodeMode);
+        System.out.println(decodeToText);
 
         SaveText text = new SaveText();
-        text.textOutSave();
+        text.textOutSave(decodeToText);
     }
 }

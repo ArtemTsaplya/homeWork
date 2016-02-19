@@ -1,10 +1,15 @@
 package modul4_task2;
 
 public class Temperature {
-    public void temperatureConvert(double temperature){
-        double temperatureFahrenheit = (temperature * 1.8) + 32;
-        System.out.println(temperatureFahrenheit + " градусов по Фаренгейту.");
-        double temperatureCelsius = (temperatureFahrenheit - 32) / 1.8;
-        System.out.println(temperatureCelsius + " гадусов по Цельсию.");
+    private double temperature;
+
+    public double converterToFahrenheit(double Celsiuse) {
+        temperature = (Celsiuse * 1.8) + 32;
+        return temperature;
+    }
+
+    public double converterToCelsius(double Fahrenheit) {
+        temperature = (Fahrenheit - 32) / 1.8;
+        return temperature;
     }
 }

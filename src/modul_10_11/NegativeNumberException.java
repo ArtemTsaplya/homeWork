@@ -1,4 +1,4 @@
-package modul_10;
+package modul_10_11;
 
 public class NegativeNumberException extends Throwable {
 
