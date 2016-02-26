@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.TreeSet;
 
 public class ExampleSortTreeSet {
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
         list.add(12);
         list.add(1);

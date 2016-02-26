@@ -7,7 +7,7 @@ public class ExampleComparator {
 
     public ExampleComparator(String name) {
         this.name = name;
-    }
+   }
 
     public String getName() {
         return name;
@@ -20,7 +20,7 @@ public class ExampleComparator {
                 '}';
     }
 
-    public static class SortByNames implements Comparator<ExampleComparator> {
+   public static class SortByNames implements Comparator<ExampleComparator> {
 
         public int compare(ExampleComparator o1, ExampleComparator o2) {
             return o1.getName().compareTo(o2.getName());
