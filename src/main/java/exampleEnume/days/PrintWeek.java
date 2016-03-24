@@ -1,9 +1,9 @@
-package exampleEnume;
+package exampleEnume.days;
 
 public class PrintWeek {
     public void printDay() {
         for (DaysOfWeek day : DaysOfWeek.values()) {
-            System.out.println(day);
+            day.printDay();
         }
     }
 }
